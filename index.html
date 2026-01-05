@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ice Cream Nails</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>🍦 Ice Cream Nails</h1>
+    <nav>
+      <a href="#products">Shop</a>
+      <a href="#deals">Deals</a>
+      <a href="#subscribe">Subscribe</a>
+      <a href="find-your-color.html">Find Your Color</a> <!-- NEW PAGE LINK -->
+    </nav>    
+    <div id="cart-icon" onclick="toggleCart()">🛒 0</div>
+  </header>
+
+  <section class="hero">
+    <h2>Polish that’s as sweet as ice cream!</h2>
+    <p>16 creamy, pastel, boutique-inspired shades. Made for summer. Made for you.</p>
+    <a href="#products" class="btn">Shop Collection</a>
+  </section>
+
+  <main>
+    <section id="products">
+      <div class="product-heading">
+        <h2>Our Collection</h2>
+        <select id="flavorFilter">
+          <option value="all">All Flavors</option>
+          <option value="pink">Pink</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="purple">Purple</option>
+          <option value="orange">Orange</option>
+          <option value="yellow">Yellow</option>
+          <option value="brown">Brown</option>
+          <option value="neutral">Neutral</option>
+          <option value="multi">Sprinkle</option>
+        </select>
+      </div>
+      <div id="product-grid" class="product-grid"></div>
+    </section>
+
+    <section id="deals">
+      <h2>Combo Deals</h2>
+      <ul>
+        <li><strong>🍌 Banana Split:</strong> 3 polishes + banana filer + whipped cream + cherries + 2 pens</li>
+        <li><strong>🍓 Fresh & Fun:</strong> Orange, Strawberry, Lemonade, Cherry Bomb, Blue Razz + Cherry Gloss + Mint + Ube Nail Pens</li>
+        <li><strong>🍫 Black & White:</strong> Cookies, Vanilla, Chocolate, Whipped Cream + Choco Roll + Sandwich Filer</li>
+      </ul>
+    </section>
+
+    <section id="subscribe">
+      <h2>Stay in Touch</h2>
+      <p>Get the scoop on new shades & sweet offers.</p>
+      <input placeholder="Enter email" />
+      <button>Subscribe</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ice Cream Nails. All rights reserved.</p>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div id="cart-sidebar">
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <p id="cart-total">Total: $0.00</p>
+    <button onclick="toggleCart()">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
