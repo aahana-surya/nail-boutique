@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Your Color – Ice Cream Nails</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #fff0f5, #fefbd8);
+      margin: 0;
+      color: #333;
+    }
+    header, footer {
+      background: #fdaecb;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    main {
+      padding: 2rem 5%;
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .tab-button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #fdaecb;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    .tab-button.active {
+      background: #cc3366;
+    }
+    .tab-content {
+      display: none;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #cc3366;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 0.75rem;
+    }
+    li::before {
+      content: '🍨 ';
+    }
+    .flavor-tag {
+      font-weight: bold;
+      color: #cc3366;
+    }
+    .quiz-link {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+    .quiz-link a {
+      color: #cc3366;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍦 Ice Cream Nails</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Shop</a>
+      <a href="index.html#deals">Deals</a>
+      <a href="index.html#subscribe">Subscribe</a>
+      <a href="find-your-color.html">Find Your Color</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="guide-intro">
+      <h2>🎨 Find Your Color</h2>
+      <p>Wondering which Ice Cream Nails polish matches your personality? Explore your perfect match by MBTI, Enneagram, Hogwarts House, Greek God/Goddess, or even your favorite Taylor Swift Era!</p>
+    </section>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab('mbti')">MBTI</button>
+      <button class="tab-button" onclick="showTab('swift')">Taylor Swift</button>
+      <button class="tab-button" onclick="showTab('hogwarts')">Hogwarts House</button>
+      <button class="tab-button" onclick="showTab('enneagram')">Enneagram</button>
+      <button class="tab-button" onclick="showTab('gods')">Greek God</button>
+    </div>
+
+    <div id="mbti" class="tab-content active">
+      <!-- MBTI content inserted here -->
+      <ul>
+        <li><strong>INFP:</strong> Cotton Candy <span class="reasoning">– Soft, dreamy, and full of heart.</span></li>
+        <li><strong>ENFP:</strong> Blue Raspberry <span class="reasoning">– Energetic, curious, and electric.</span></li>
+        <li><strong>INFJ:</strong> Pistachio <span class="reasoning">– Thoughtful, earthy, and complex.</span></li>
+        <li><strong>ENFJ:</strong> Orange Creamsicle <span class="reasoning">– Magnetic, nurturing, and bold.</span></li>
+        <li><strong>ISFJ:</strong> Coffee <span class="reasoning">– Grounded, warm, and dependable.</span></li>
+        <li><strong>ESFJ:</strong> Cherry Gloss <span class="reasoning">– Bright, social, and sweet.</span></li>
+        <li><strong>ISTJ:</strong> Triple Chocolate <span class="reasoning">– Solid, dependable, and strong.</span></li>
+        <li><strong>ESTJ:</strong> Mint <span class="reasoning">– Crisp, clear, and structured.</span></li>
+        <li><strong>INTJ:</strong> Sprinkles <span class="reasoning">– Intriguing, deep, and unexpected.</span></li>
+        <li><strong>ENTJ:</strong> Cherry Bomb <span class="reasoning">– Assertive, bold, and fiery.</span></li>
+        <li><strong>ISTP:</strong> Whipped Cream <span class="reasoning">– Cool, clean, and reserved.</span></li>
+        <li><strong>ESTP:</strong> Ube <span class="reasoning">– Unique, edgy, and striking.</span></li>
+        <li><strong>ISFP:</strong> French Vanilla <span class="reasoning">– Gentle, stylish, and understated.</span></li>
+        <li><strong>ESFP:</strong> Strawberry <span class="reasoning">– Lively, vibrant, and playful.</span></li>
+        <li><strong>INTP:</strong> Cookies n’ Cream <span class="reasoning">– Smart, cool, and layered.</span></li>
+        <li><strong>ENTP:</strong> Lemonade <span class="reasoning">– Clever, tangy, and bright.</span></li>
+      </ul>
+    </div>
+
+    <div id="swift" class="tab-content">
+      <ul>
+        <li><strong>Debut:</strong> French Vanilla, Pistachio </li>
+        <li><strong>Fearless:</strong> Lemonade </li>
+        <li><strong>Speak now:</strong> Ube </li>
+        <li><strong>Red:</strong> Cherry Bomb</li>
+        <li><strong>1989:</strong> Cotton Candy, Cherry Gloss </li>
+        <li><strong>Reputation:</strong> Triple Chocolate </li>
+        <li><strong>Lover:</strong> Strawberry, Sprinkles </li>
+        <li><strong>Folklore:</strong> Cookies n’ Cream </li>
+        <li><strong>Evermore:</strong>  Coffee </li>
+        <li><strong>Midnights:</strong> Blue Raspberry </li>
+        <li><strong>The Tortured Poets Department:</strong> Whipped Cream </li>
+        <li><strong>Life of a Showgirl:</strong> Mint, Orange Creamsicle</li>
+      </ul>
+    </div>
+
+    <div id="hogwarts" class="tab-content">
+      <ul>
+        <li><strong>Gryffindor:</strong> Cherry Bomb, Orange Creamsicle</li>
+        <li><strong>Hufflepuff:</strong> Cotton Candy, prinkles, Lemonade, Whipped Cream, French Vanilla, Strawberry</li>
+        <li><strong>Ravenclaw:</strong> Cookies n’ Cream, Pistachio, Ube, Mint, Blue Raspberry,</li>
+        <li><strong>Slytherin:</strong> Cherry Gloss, Coffee, Triple Chocolate</li>
+      </ul>
+    </div>
+
+    <div id="enneagram" class="tab-content">
+      <ul>
+        <li><strong>Type 1 (The Reformer):</strong> Triple Chocolate, Whipped Cream</li>
+        <li><strong>Type 2 (The Helper):</strong> Cherry Gloss, French Vanilla</li>
+        <li><strong>Type 3 (The Achiever):</strong> Mint, Cherry Bomb</li>
+        <li><strong>Type 4 (The Individualist):</strong> Cotton Candy, Sprinkles</li>
+        <li><strong>Type 5 (The Investigator):</strong> Cookies n’ Cream, Pistachio</li>
+        <li><strong>Type 6 (The Loyalist):</strong> Coffee, Whipped Cream</li>
+        <li><strong>Type 7 (The Enthusiast):</strong> Lemonade, Blue Raspberry</li>
+        <li><strong>Type 8 (The Challenger):</strong> Ube, Cherry Bomb</li>
+        <li><strong>Type 9 (The Peacemaker):</strong> French Vanilla, Strawberry</li>
+      </ul>
+    </div>
+
+    <div id="gods" class="tab-content">
+      <ul>
+        <li><strong>Aphrodite:</strong> Strawberry</li>
+        <li><strong>Apollo:</strong> Orange Creamsicle</li>
+        <li><strong>Athena:</strong> Mint</li>
+        <li><strong>Artemis:</strong> Pistachio</li>
+        <li><strong>Zeus:</strong> Blue Raspberry</li>
+        <li><strong>Hades:</strong> Triple Chocolate</li>
+        <li><strong>Hermes:</strong> Lemonade</li>
+        <li><strong>Dionysus:</strong> Cherry Gloss</li>
+        <li><strong>Hera:</strong> Cherry Bomb</li>
+        <li><strong>Demeter:</strong> French Vanilla</li>
+        <li><strong>Poseidon:</strong> Cotton Candy</li>
+        <li><strong>Hephaestus:</strong> Coffee</li>
+        <li><strong>Persephone:</strong> Sprinkles</li>
+        <li><strong>Hestia:</strong> Whipped Cream</li>
+        <li><strong>Ares:</strong> Ube</li>
+        <li><strong>Gaia:</strong> Cookies n’ Cream</li>
+      </ul>
+    </div>
+
+    <div class="quiz-link">
+      👉 Want help picking? <a href="find-your-flavor-quiz.html">Take the interactive quiz!</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ice Cream Nails. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

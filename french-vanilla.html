@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>French Vanilla – Ice Cream Nails</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #fef8ee, #fff9f2, #fff3e5);
+      color: #5a4430;
+    }
+
+    header, footer {
+      background: #e8d8c0;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .container {
+      padding: 2rem 5%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: #b6894c;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .product-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .image-gallery {
+      flex: 1 1 300px;
+    }
+
+    .main-image {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .thumbnail-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s;
+    }
+
+    .thumbnail:hover {
+      border: 2px solid #c8a97e;
+    }
+
+    .product-info {
+      flex: 1 1 300px;
+    }
+
+    .product-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #b6894c;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #8a6848;
+      margin-bottom: 1rem;
+    }
+
+    .email-btn {
+      display: inline-block;
+      background: #b6894c;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 1rem 0;
+    }
+
+    .product-info p {
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-top: 2.5rem;
+    }
+
+    .rec-grid {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .rec-card {
+      background: #fff7ee;
+      padding: 1rem;
+      border-radius: 10px;
+      flex: 1 1 150px;
+      text-align: center;
+      text-decoration: none;
+      color: #a26e3f;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>French Vanilla</h1>
+  </header>
+
+  <div class="container">
+    <a class="back-link" href="../index.html">← Back to Shop</a>
+
+    <div class="product-wrapper">
+      <div class="image-gallery">
+        <img id="mainImage" class="main-image" src="../images/french-vanilla.jpg" alt="French Vanilla Nail Polish" />
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="../images/french-vanilla.jpg" onclick="switchImage('../images/french-vanilla.jpg')" />
+          <img class="thumbnail" src="../images/french-vanilla2.jpg" onclick="switchImage('../images/french-vanilla2.jpg')" />
+          <img class="thumbnail" src="../images/french-vanilla3.jpg" onclick="switchImage('../images/french-vanilla3.jpg')" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h2>Chic off-white perfect for French manicures</h2>
+        <p class="price">$12.00</p>
+        <p><strong>Creator's note:</strong> Simplicity is satisfaction. Whether it’s having a creamy cup of ice cream or painting your nails an off-white color, french vanilla is perfect! Our french vanilla nail polish has a classy look that suits anyone who wants something chic and simple. It is the ideal to-go nail polish because it’s easygoing and sophisticated at the same time! This shade is great for your next FRENCH manicure too! I mean, a nail polish that is also based on a classic flavor? Sweet!  So what are you waiting for? Try it now!</p>
+        <p><strong>Reviews:</strong><br>
+        <em>“Pairs perfectly with literally everything.”</em><br>
+        <em>“Elegant, clean, and so pretty in person.”</em>
+        </p>
+        <a href="mailto:order@icecreamnails.com?subject=Order%20Request%20for%20French%20Vanilla" class="email-btn">Order via Email</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>You may also like</h3>
+      <div class="rec-grid">
+        <a class="rec-card" href="cookies.html">Cookies n’ Cream</a>
+        <a class="rec-card" href="whipped.html">Whipped Cream</a>
+        <a class="rec-card" href="lemonade.html">Lemonade</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Ice Cream Nails
+  </footer>
+
+  <script>
+    function switchImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
+</body>
+</html>

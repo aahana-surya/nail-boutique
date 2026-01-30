@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blue Raspberry – Ice Cream Nails</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #0d1b2a, #1b263b);
+      color: #e3f2fd;
+    }
+
+    header, footer {
+      background: #101a80;
+      color: #e0f7fa;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .container {
+      padding: 2rem 5%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: #64b5f6;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .product-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .image-gallery {
+      flex: 1 1 300px;
+    }
+
+    .main-image {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(100, 181, 246, 0.4);
+    }
+
+    .thumbnail-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s;
+    }
+
+    .thumbnail:hover {
+      border: 2px solid #64b5f6;
+    }
+
+    .product-info {
+      flex: 1 1 300px;
+    }
+
+    .product-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #90caf9;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #bbdefb;
+      margin-bottom: 1rem;
+    }
+
+    .email-btn {
+      display: inline-block;
+      background: #64b5f6;
+      color: #0d1b2a;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 1rem 0;
+      font-weight: 600;
+    }
+
+    .email-btn:hover {
+      background: #90caf9;
+    }
+
+    .product-info p {
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-top: 2.5rem;
+    }
+
+    .rec-grid {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .rec-card {
+      background: #1c2b3a;
+      padding: 1rem;
+      border-radius: 10px;
+      flex: 1 1 150px;
+      text-align: center;
+      text-decoration: none;
+      color: #e0f7fa;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(100, 181, 246, 0.2);
+    }
+
+    footer {
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blue Raspberry</h1>
+  </header>
+
+  <div class="container">
+    <a class="back-link" href="../index.html">← Back to Shop</a>
+
+    <div class="product-wrapper">
+      <div class="image-gallery">
+        <img id="mainImage" class="main-image" src="../images/bluerazz.jpg" alt="Blue Raspberry Nail Polish" />
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="../images/bluerazz.jpg" onclick="switchImage('../images/bluerazz.jpg')" />
+          <img class="thumbnail" src="../images/bluerazz2.jpg" onclick="switchImage('../images/bluerazz2.jpg')" />
+          <img class="thumbnail" src="../images/bluerazz3.jpg" onclick="switchImage('../images/bluerazz3.jpg')" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h2>Deep electric blue with icy shimmer</h2>
+        <p class="price">$12.00</p>
+        <p><strong>Creator's note:</strong> This isn’t your average blue. Blue Raspberry brings after-dark energy — bold, tangy, and totally unforgettable. Inspired by midnight slushies and neon parties, this shade is made to stand out even in the dark.</p>
+        <p><strong>Reviews:</strong><br>
+        <em>“It looks like a galaxy on my nails.”</em><br>
+        <em>“Moody, rich, and still super fun.”</em>
+        </p>
+        <a href="mailto:order@icecreamnails.com?subject=Order%20Request%20for%20Blue%20Raspberry" class="email-btn">Order via Email</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>You may also like</h3>
+      <div class="rec-grid">
+        <a class="rec-card" href="cottoncandy.html">Cotton Candy</a>
+        <a class="rec-card" href="sprinkles.html">Sprinkles</a>
+        <a class="rec-card" href="mint.html">Mint</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Ice Cream Nails
+  </footer>
+
+  <script>
+    function switchImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
+</body>
+</html>

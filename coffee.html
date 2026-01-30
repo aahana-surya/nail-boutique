@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee – Ice Cream Nails</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #f3ede9, #e0cfc4);
+      color: #4e3b2e;
+    }
+
+    header, footer {
+      background: #d7bba9;
+      color: #3e2b20;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .container {
+      padding: 2rem 5%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: #795548;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .product-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .image-gallery {
+      flex: 1 1 300px;
+    }
+
+    .main-image {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(121, 85, 72, 0.2);
+    }
+
+    .thumbnail-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s;
+    }
+
+    .thumbnail:hover {
+      border: 2px solid #8d6e63;
+    }
+
+    .product-info {
+      flex: 1 1 300px;
+    }
+
+    .product-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #5d4037;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #6d4c41;
+      margin-bottom: 1rem;
+    }
+
+    .email-btn {
+      display: inline-block;
+      background: #bcaaa4;
+      color: #3e2b20;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 1rem 0;
+      font-weight: 600;
+    }
+
+    .email-btn:hover {
+      background: #d7ccc8;
+    }
+
+    .product-info p {
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-top: 2.5rem;
+    }
+
+    .rec-grid {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .rec-card {
+      background: #f3ede9;
+      padding: 1rem;
+      border-radius: 10px;
+      flex: 1 1 150px;
+      text-align: center;
+      text-decoration: none;
+      color: #6d4c41;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(121, 85, 72, 0.1);
+    }
+
+    footer {
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Coffee</h1>
+  </header>
+
+  <div class="container">
+    <a class="back-link" href="../index.html">← Back to Shop</a>
+
+    <div class="product-wrapper">
+      <div class="image-gallery">
+        <img id="mainImage" class="main-image" src="../images/coffee.jpg" alt="Coffee Nail Polish" />
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="../images/coffee.jpg" onclick="switchImage('../images/coffee.jpg')" />
+          <img class="thumbnail" src="../images/coffee2.jpg" onclick="switchImage('../images/coffee2.jpg')" />
+          <img class="thumbnail" src="../images/coffee3.jpg" onclick="switchImage('../images/coffee3.jpg')" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h2>Latte brown with cozy café vibes</h2>
+        <p class="price">$12.00</p>
+        <p><strong>Creator's note:</strong> Warm and rich like your favorite morning brew, Coffee is the perfect neutral for chill days and cozy nights. It’s creamy, wearable, and totally addicting — a true everyday staple that pairs with everything.</p>
+        <p><strong>Reviews:</strong><br>
+        <em>“This is my go-to nude with personality!”</em><br>
+        <em>“Makes my nails look polished without trying too hard.”</em>
+        </p>
+        <a href="mailto:order@icecreamnails.com?subject=Order%20Request%20for%20Coffee" class="email-btn">Order via Email</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>You may also like</h3>
+      <div class="rec-grid">
+        <a class="rec-card" href="cookies.html">Cookies n’ Cream</a>
+        <a class="rec-card" href="french-vanilla.html">French Vanilla</a>
+        <a class="rec-card" href="caramel.html">Caramel Drizzle</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Ice Cream Nails
+  </footer>
+
+  <script>
+    function switchImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
+</body>
+</html>

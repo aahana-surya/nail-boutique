@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ube – Ice Cream Nails</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #f3e5f5, #e1bee7);
+      color: #4a3b5c;
+    }
+
+    header, footer {
+      background: #e1bee7;
+      color: #4a3b5c;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .container {
+      padding: 2rem 5%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: #7b529c;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .product-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .image-gallery {
+      flex: 1 1 300px;
+    }
+
+    .main-image {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(155, 89, 182, 0.2);
+    }
+
+    .thumbnail-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s;
+    }
+
+    .thumbnail:hover {
+      border: 2px solid #9c4dcc;
+    }
+
+    .product-info {
+      flex: 1 1 300px;
+    }
+
+    .product-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #6a1b9a;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #8e24aa;
+      margin-bottom: 1rem;
+    }
+
+    .email-btn {
+      display: inline-block;
+      background: #ce93d8;
+      color: #4a3b5c;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 1rem 0;
+      font-weight: 600;
+    }
+
+    .email-btn:hover {
+      background: #e1bee7;
+    }
+
+    .product-info p {
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-top: 2.5rem;
+    }
+
+    .rec-grid {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .rec-card {
+      background: #f3e5f5;
+      padding: 1rem;
+      border-radius: 10px;
+      flex: 1 1 150px;
+      text-align: center;
+      text-decoration: none;
+      color: #6a1b9a;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(155, 89, 182, 0.15);
+    }
+
+    footer {
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ube</h1>
+  </header>
+
+  <div class="container">
+    <a class="back-link" href="../index.html">← Back to Shop</a>
+
+    <div class="product-wrapper">
+      <div class="image-gallery">
+        <img id="mainImage" class="main-image" src="../images/ube.jpg" alt="Ube Nail Polish" />
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="../images/ube.jpg" onclick="switchImage('../images/ube.jpg')" />
+          <img class="thumbnail" src="../images/ube2.jpg" onclick="switchImage('../images/ube2.jpg')" />
+          <img class="thumbnail" src="../images/ube3.jpg" onclick="switchImage('../images/ube3.jpg')" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h2>Pastel ube purple with creamy undertones</h2>
+        <p class="price">$12.00</p>
+        <p><strong>Creator's note:</strong> Inspired by the beloved Filipino dessert, this rich pastel purple is subtle, soft, and totally unique. Ube is a dreamy blend of sweet lilac and cozy elegance — perfect for anyone who wants something fun but wearable.</p>
+        <p><strong>Reviews:</strong><br>
+        <em>“It’s such a soft but statement color.”</em><br>
+        <em>“I get compliments every time I wear this one!”</em>
+        </p>
+        <a href="mailto:order@icecreamnails.com?subject=Order%20Request%20for%20Ube" class="email-btn">Order via Email</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>You may also like</h3>
+      <div class="rec-grid">
+        <a class="rec-card" href="cottoncandy.html">Cotton Candy</a>
+        <a class="rec-card" href="strawberry.html">Strawberry Swirl</a>
+        <a class="rec-card" href="blueberry.html">Blueberry Blast</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Ice Cream Nails
+  </footer>
+
+  <script>
+    function switchImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
+</body>
+</html>

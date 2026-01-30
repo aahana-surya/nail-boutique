@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Your Flavor Quiz – Ice Cream Nails</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: #cc3366;
+      text-align: center;
+    }
+    .quiz-container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question h3 {
+      color: #f57a98;
+    }
+    .answers label {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #f9dce1;
+      border-radius: 12px;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .answers label:hover {
+      background: #fcb8c4;
+    }
+    .answers img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    button {
+      background: #cc3366;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      display: block;
+      margin: 2rem auto;
+    }
+    #result {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      color: #cc3366;
+    }
+  </style>
+</head>
+<body>
+  <h1>🍦 Find Your Flavor Quiz</h1>
+  <div class="quiz-container">
+    <form id="quizForm">
+
+      <!-- 1. Hogwarts House -->
+<div class="question">
+  <h3>1. What's your Hogwarts House?</h3>
+  <div class="answers">
+    <label><input type="radio" name="hogwarts" value="Blue Raspberry,Cherry Bomb,Ube,Lemonade"> <img src="images/hogwartsimages/gryffindor.jpg" alt="Gryffindor"> Gryffindor</label>
+    <label><input type="radio" name="hogwarts" value="French Vanilla,Whipped Cream,Coffee,Cotton Candy"> <img src="images/hogwartsimages/hufflepuff.jpg" alt="Hufflepuff"> Hufflepuff</label>
+    <label><input type="radio" name="hogwarts" value="Mint,Cookies n’ Cream,Pistachio,Sprinkles"> <img src="images/hogwartsimages/ravenclaw.jpg" alt="Ravenclaw"> Ravenclaw</label>
+    <label><input type="radio" name="hogwarts" value="Cherry Gloss,Triple Chocolate,Orange Creamsicle,Strawberry"> <img src="images/hogwartsimages/slytherin.jpg" alt="Slytherin"> Slytherin</label>
+  </div>
+</div>
+
+<!-- 2. MBTI -->
+<div class="question">
+  <h3>2. What's your MBTI type?</h3>
+  <div class="answers">
+    <label><input type="radio" name="mbti" value="Cotton Candy"><img src="images/mtbiimages/infp.jpg"> INFP</label>
+    <label><input type="radio" name="mbti" value="Blue Raspberry"><img src="images/mtbiimages/enfp.jpg"> ENFP</label>
+    <label><input type="radio" name="mbti" value="Pistachio"><img src="images/mtbiimages/infj.jpg"> INFJ</label>
+    <label><input type="radio" name="mbti" value="Orange Creamsicle"><img src="mtbiimages/enfj.jpg"> ENFJ</label>
+    <label><input type="radio" name="mbti" value="Coffee"><img src="images/mtbiimages/isfj.jpg"> ISFJ</label>
+    <label><input type="radio" name="mbti" value="Cherry Gloss"><img src="images/mtbiimages/esfj.jpg"> ESFJ</label>
+    <label><input type="radio" name="mbti" value="Triple Chocolate"><img src="images/mtbiimages/istj.jpg"> ISTJ</label>
+    <label><input type="radio" name="mbti" value="Mint"><img src="images/mtbiimages/estj.jpg"> ESTJ</label>
+    <label><input type="radio" name="mbti" value="Sprinkles"><img src="images/mtbiimages/intj.jpg"> INTJ</label>
+    <label><input type="radio" name="mbti" value="Cherry Bomb"><img src="images/mtbiimages/entj.jpg"> ENTJ</label>
+    <label><input type="radio" name="mbti" value="Whipped Cream"><img src="images/mtbiimages/istp.jpg"> ISTP</label>
+    <label><input type="radio" name="mbti" value="Ube"><img src="images/mtbiimages/estp.jpg"> ESTP</label>
+    <label><input type="radio" name="mbti" value="French Vanilla"><img src="images/mtbiimages/isfp.jpg"> ISFP</label>
+    <label><input type="radio" name="mbti" value="Strawberry"><img src="images/mtbiimages/esfp.jpg"> ESFP</label>
+    <label><input type="radio" name="mbti" value="Cookies n’ Cream"><img src="images/mtbiimages/intp.jpg"> INTP</label>
+    <label><input type="radio" name="mbti" value="Lemonade"><img src="images/mtbiimages/entp.jpg"> ENTP</label>
+  </div>
+</div>
+
+<!-- 3. Taylor Swift Era -->
+<div class="question">
+  <h3>3. Which Taylor Swift era are you in?</h3>
+  <div class="answers">
+    <label><input type="radio" name="swift" value="French Vanilla,Pistachio"><img src="images/eraimages/debut.jpg"> Debut</label>
+    <label><input type="radio" name="swift" value="Lemonade"><img src="images/eraimages/fearless.jpg"> Fearless</label>
+    <label><input type="radio" name="swift" value="Ube"><img src="images/eraimages/speaknow.jpg"> Speak Now</label>
+    <label><input type="radio" name="swift" value="Cherry Bomb"><img src="images/eraimages/red.jpg"> Red</label>
+    <label><input type="radio" name="swift" value="Cotton Candy,Cherry Gloss"><img src="images/eraimages/1989.jpg"> 1989</label>
+    <label><input type="radio" name="swift" value="Triple Chocolate"><img src="images/eraimages/reputation.jpg"> Reputation</label>
+    <label><input type="radio" name="swift" value="Strawberry,Sprinkles"><img src="images/eraimages/lover.jpg"> Lover</label>
+    <label><input type="radio" name="swift" value="Cookies n’ Cream"><img src="images/eraimages/folklore.jpg"> Folklore</label>
+    <label><input type="radio" name="swift" value="Coffee"><img src="images/eraimages/evermore.jpg"> Evermore</label>
+    <label><input type="radio" name="swift" value="Blue Raspberry"><img src="images/eraimages/midnights.jpg"> Midnights</label>
+    <label><input type="radio" name="swift" value="Whipped Cream"><img src="images/eraimages/tpd.jpg"> Tortured Poets Department</label>
+    <label><input type="radio" name="swift" value="Mint,Orange Creamsicle"><img src="images/eraimages/showgirl.jpg"> Life of a Showgirl</label>
+  </div>
+</div>
+
+<!-- 4. Enneagram -->
+<div class="question">
+  <h3>5. What's your Enneagram type?</h3>
+  <div class="answers">
+    <label><input type="radio" name="enneagram" value="Triple Chocolate,Whipped Cream"><img src="images/typeimages/type1.jpg"> Type 1</label>
+    <label><input type="radio" name="enneagram" value="Cherry Gloss,French Vanilla"><img src="images/typeimages/type2.jpg"> Type 2</label>
+    <label><input type="radio" name="enneagram" value="Mint,Cherry Bomb"><img src="images/typeimages/type3.jpg"> Type 3</label>
+    <label><input type="radio" name="enneagram" value="Cotton Candy,Sprinkles"><img src="images/typeimages/type4.jpg"> Type 4</label>
+    <label><input type="radio" name="enneagram" value="Cookies n’ Cream,Pistachio"><img src="images/typeimages/type5.jpg"> Type 5</label>
+    <label><input type="radio" name="enneagram" value="Coffee,Whipped Cream"><img src="images/typeimages/type6.jpg"> Type 6</label>
+    <label><input type="radio" name="enneagram" value="Lemonade,Blue Raspberry"><img src="images/typeimages/type7.jpg"> Type 7</label>
+    <label><input type="radio" name="enneagram" value="Ube,Cherry Bomb"><img src="images/typeimages/type8.jpg"> Type 8</label>
+    <label><input type="radio" name="enneagram" value="French Vanilla,Strawberry"><img src="images/typeimages/type9.jpg"> Type 9</label>
+  </div>
+</div>
+
+<!-- 5. Greek God Match -->
+<div class="question">
+  <h3>6. Which Greek god/goddess represents your vibe?</h3>
+  <div class="answers">
+    <label><input type="radio" name="gods" value="Strawberry"><img src="images/greekimages/aphrodite.jpg"> Aphrodite</label>
+    <label><input type="radio" name="gods" value="Orange Creamsicle"><img src="images/greekimages/apollo.jpg"> Apollo</label>
+    <label><input type="radio" name="gods" value="Mint"><img src="images/greekimages/athena.jpg"> Athena</label>
+    <label><input type="radio" name="gods" value="Pistachio"><img src="images/greekimages/artemis.jpg"> Artemis</label>
+    <label><input type="radio" name="gods" value="Blue Raspberry"><img src="images/greekimages/zeus.jpg"> Zeus</label>
+    <label><input type="radio" name="gods" value="Triple Chocolate"><img src="images/greekimages/hades.jpg"> Hades</label>
+    <label><input type="radio" name="gods" value="Lemonade"><img src="images/greekimages/hermes.jpg"> Hermes</label>
+    <label><input type="radio" name="gods" value="Cherry Gloss"><img src="images/greekimages/dionysus.jpg"> Dionysus</label>
+    <label><input type="radio" name="gods" value="Cherry Bomb"><img src="images/greekimages/hera.jpg"> Hera</label>
+    <label><input type="radio" name="gods" value="French Vanilla"><img src="images/greekimages/demeter.jpg"> Demeter</label>
+    <label><input type="radio" name="gods" value="Cotton Candy"><img src="images/greekimages/poseidon.jpg"> Poseidon</label>
+    <label><input type="radio" name="gods" value="Coffee"><img src="images/greekimages/hephaestus.jpg"> Hephaestus</label>
+    <label><input type="radio" name="gods" value="Sprinkles"><img src="images/greekimages/persephone.jpg"> Persephone</label>
+    <label><input type="radio" name="gods" value="Whipped Cream"><img src="images/greekimages/hestia.jpg"> Hestia</label>
+    <label><input type="radio" name="gods" value="Ube"><img src="images/greekimages/ares.jpg"> Ares</label>
+    <label><input type="radio" name="gods" value="Cookies n’ Cream"><img src="images/greekimages/gaia.jpg"> Gaia</label>
+  </div>
+
+</div>
+ <!-- 6. Mood -->
+<div class="question">
+  <h3>4. What's your current mood?</h3>
+  <div class="answers">
+    <label><input type="radio" name="mood" value="Coffee,Whipped Cream"><img src="images/moodimages/calm.jpg"> Calm</label>
+    <label><input type="radio" name="mood" value="Cherry Bomb,Blue Raspberry"><img src="images/moodimages/bold.jpg"> Bold</label>
+    <label><input type="radio" name="mood" value="Strawberry,Cherry Gloss,Ube"><img src="images/moodimages/party.jpg"> Party</label>
+    <label><input type="radio" name="mood" value="French Vanilla,Cotton Candy"><img src="images/moodimages/casual.jpg"> Casual</label>
+    <label><input type="radio" name="mood" value="Sprinkles,Pistachio"><img src="images/moodimages/unique.jpg"> Unique</label>
+    <label><input type="radio" name="mood" value="Mint,Triple Chocolate"><img src="images/moodimages/formal.jpg"> Formal</label>
+    <label><input type="radio" name="mood" value="Lemonade,Orange Creamsicle"><img src="images/moodimages/summer.jpg"> Summer</label>
+  </div>
+</div>
+
+      <button type="submit">Reveal My Flavor!</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById('quizForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      const counts = {};
+
+      for (let entry of formData.entries()) {
+        const flavors = entry[1].split(',');
+        flavors.forEach(flavor => {
+          flavor = flavor.trim();
+          counts[flavor] = (counts[flavor] || 0) + 1;
+        });
+      }
+
+      const topFlavor = Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
+      document.getElementById('result').innerHTML = `🍧 Your flavor match is <strong>${topFlavor}</strong>!`;
+    });
+  </script>
+</body>
+</html>

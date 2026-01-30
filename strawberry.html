@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strawberry – Ice Cream Nails</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #f8e0e8, #fceef1, #ffb0ca);
+      color: #4d2c2c;
+    }
+
+    header, footer {
+      background: #f4889c;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .container {
+      padding: 2rem 5%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: #d44a63;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .product-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .image-gallery {
+      flex: 1 1 300px;
+    }
+
+    .main-image {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .thumbnail-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s;
+    }
+
+    .thumbnail:hover {
+      border: 2px solid #f1708b;
+    }
+
+    .product-info {
+      flex: 1 1 300px;
+    }
+
+    .product-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #d44a63;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #6b2b2b;
+      margin-bottom: 1rem;
+    }
+
+    .email-btn {
+      display: inline-block;
+      background: #f1708b;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 1rem 0;
+    }
+
+    .product-info p {
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-top: 2.5rem;
+    }
+
+    .rec-grid {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .rec-card {
+      background: #fff0f5cc;
+      padding: 1rem;
+      border-radius: 10px;
+      flex: 1 1 150px;
+      text-align: center;
+      text-decoration: none;
+      color: #c14259;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Strawberry</h1>
+  </header>
+
+  <div class="container">
+    <a class="back-link" href="../index.html">← Back to Shop</a>
+
+    <div class="product-wrapper">
+      <div class="image-gallery">
+        <img id="mainImage" class="main-image" src="../images/strawberry.jpg" alt="Strawberry Nail Polish" />
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="../images/strawberry.jpg" onclick="switchImage('../images/strawberry.jpg')" />
+          <img class="thumbnail" src="../images/strawberry2.jpg" onclick="switchImage('../images/strawberry2.jpg')" />
+          <img class="thumbnail" src="../images/strawberry3.jpg" onclick="switchImage('../images/strawberry3.jpg')" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h2>Bright pink with speckles of fun</h2>
+        <p class="price">$12.00</p>
+        <p><strong>Creator's note:</strong> Strawberry, a bright and fruity ice cream, which makes you day 100 times better matches this nail polish. It’s quite a unique nail polish with strawberry chunks, this bright pink will make everyone want to be friends with you. The unique color with spots makes it look as if you spent hours designing it when it only took you 10 minutes! This easy look gives you just the right amount of energy before you start your day! So what are you waiting for? Try it now!</p>
+        <p><strong>Reviews:</strong><br>
+        <em>“Literally looks like strawberry milkshake!”</em><br>
+        <em>“My new everyday pink.”</em>
+        </p>
+        <a href="mailto:order@icecreamnails.com?subject=Order%20Request%20for%20Strawberry" class="email-btn">Order via Email</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>You may also like</h3>
+      <div class="rec-grid">
+        <a class="rec-card" href="cherries.html">Cherries</a>
+        <a class="rec-card" href="cotton-candy.html">Cotton Candy</a>
+        <a class="rec-card" href="lemonade.html">Lemonade</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Ice Cream Nails
+  </footer>
+
+  <script>
+    function switchImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
+</body>
+</html>
